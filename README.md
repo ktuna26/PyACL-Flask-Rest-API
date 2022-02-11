@@ -8,13 +8,15 @@ Please, follow the steps bellow for an easy demo.
 
 ## Getting started
 Install python dependencies;
+- redis
 - numpy
 - Pillow
-- opencv-python-headless
-- scikit-image
+- requests
 - werkzeug
-- flask-restplus == 0.12.1
-- flask == 1.0.3
+- configparser
+- opencv-python-headless
+- flask-restplus==0.12.1
+- flask==1.0.3
 
 ```
 pip install -r requirements.txt
