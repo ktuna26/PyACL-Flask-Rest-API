@@ -1,7 +1,7 @@
 # PyACL Flask Rest API
 This is a simple python object detection and classification server using [yolov5](https://gitee.com/tianyu__zhou/pyacl_samples/tree/a800/acl_yolov5_pt).
 
-This server runs multithreaded. The requests from many different users at the same time are queued and sent to the asynchronous inference server using the [redis](https://redis.io/) (message queuing/message brokering) infrastructure. 
+This server runs multithreaded. The requests from many different users at the same time are queued and sent to the asynchronous inference server using the [Redis](https://redis.io/)(message queuing/message brokering) infrastructure. 
 
 Please, follow the steps bellow for an easy demo.
 
@@ -31,15 +31,15 @@ sudo apt-get install redis-server -y
 
 ## PT model -> ONNX format -> Ascend om format
 ### Get PT file
-Download the PT file of from this link,
+Download the `PT` file of from this link,
 - https://github.com/ultralytics/yolov5/releases/tag/v2.0
 - Upload the pt file to `weights` directory
 
 ### PT -> ONNX
-Use the onnx_exporter/export.py script in this repository to convert PT file to ONNX file.
+Use the `onnx_exporter/export.py` script in this repository to convert `PT` file to `ONNX` file.
 
 ### Remove a few operators in the ONNX file
-The  **Slice** and  **Transpose** operators will slow down the model inference significantly. Use the onnx_exporter/modify.py script in this repo to remove the impact of these operators.
+The  **Slice** and  **Transpose** operators will slow down the model inference significantly. Use the `onnx_exporter/modify.py` script in this repo to remove the impact of these operators.
 
 ### ONNX -> OM
 ```bash
@@ -60,14 +60,14 @@ Open the terminal on the project path and then run the following command.
 ./server_run.sh
 ```
 
-**Note :** Import `Yolov5 Flask Rest API.postman_collection.json` file to `postman` collections for easy demo
-<img alt="teaser" src="./static/img/yolov5_flask_postman.png">
+**Note :** Import `Yolov5 Flask Rest API.postman_collection.json` file to [postman](https://www.postman.com/) collections for easy demo
+<img alt="teaser" src="./static/images/yolov5_flask_postman.png">
 
 ### Swagger Usage
 Swagger will be available `http://{server_ip}:{server_port}`.
 
 Open web browser, upload an image and enjoy using [Swagger](https://swagger.io/) UI for easy demo!
-<img alt="teaser" src="./static/img/yolov5_flask_swagger.png">
+<img alt="teaser" src="./static/images/yolov5_flask_swagger.png">
 
 
 ## Docker Build & Run
@@ -87,5 +87,7 @@ sudo docker_run.sh pyacl_flask_rest_api:1.0
 
 ## Resources
 [1] https://support.huawei.com/enterprise/en/doc/EDOC1100206687/d6a371a4/image-classification-with-caffe-resnet-50-asynchronous-inference)
+
 [2] https://www.pyimagesearch.com/2018/02/05/deep-learning-production-keras-redis-flask-apache/
+
 [3] https://phoenixnap.com/kb/install-redis-on-ubuntu-20-04
