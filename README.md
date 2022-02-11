@@ -93,3 +93,15 @@ sudo docker_run.sh pyacl_flask_rest_api:1.0
 [2] https://www.pyimagesearch.com/2018/02/05/deep-learning-production-keras-redis-flask-apache/
 
 [3] https://phoenixnap.com/kb/install-redis-on-ubuntu-20-04
+
+
+## Authors
+Kubilay Tuna
+
+
+## Copyright
+Huawei Technologies Co., Ltd
+
+
+## License
+MIT
