@@ -92,9 +92,11 @@ sudo docker_run.sh pyacl_flask_rest_api:1.0
 ## Resources
 [1] https://support.huawei.com/enterprise/en/doc/EDOC1100206687/d6a371a4/image-classification-with-caffe-resnet-50-asynchronous-inference)
 
-[2] https://www.pyimagesearch.com/2018/02/05/deep-learning-production-keras-redis-flask-apache/
+[2] https://support.huawei.com/enterprise/en/doc/EDOC1100209586/9a47874b/creating-a-container-image
 
-[3] https://phoenixnap.com/kb/install-redis-on-ubuntu-20-04
+[3] https://www.pyimagesearch.com/2018/02/05/deep-learning-production-keras-redis-flask-apache/
+
+[4] https://phoenixnap.com/kb/install-redis-on-ubuntu-20-04
 
 
 ## Authors
