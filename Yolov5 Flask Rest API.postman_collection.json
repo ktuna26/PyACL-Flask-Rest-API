@@ -1,0 +1,60 @@
+{
+	"info": {
+		"_postman_id": "aa5e429a-f5fd-4af0-be6a-233e8d5e4d46",
+		"name": "Yolov5 Flask Rest API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Home Page",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://10.1.6.11:8500",
+					"protocol": "http",
+					"host": [
+						"10",
+						"1",
+						"6",
+						"11"
+					],
+					"port": "8500"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Analyze",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/k84196832/Desktop/pyacl_flask_rest_api/data/images/kite.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://10.1.6.11:8500/analyze",
+					"protocol": "http",
+					"host": [
+						"10",
+						"1",
+						"6",
+						"11"
+					],
+					"port": "8500",
+					"path": [
+						"analyze"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

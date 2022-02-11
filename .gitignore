@@ -136,3 +136,10 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# dl/ml models
+*.kernel_meta/
+*.fusion_result.json
+*.om
+*.onnx
+*.pt
