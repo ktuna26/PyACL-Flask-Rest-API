@@ -61,12 +61,14 @@ Open the terminal on the project path and then run the following command.
 ```
 
 **Note :** Import `Yolov5 Flask Rest API.postman_collection.json` file to [postman](https://www.postman.com/) collections for easy demo
+
 <img alt="teaser" src="./static/images/yolov5_flask_postman.png">
 
 ### Swagger Usage
 Swagger will be available `http://{server_ip}:{server_port}`.
 
 Open web browser, upload an image and enjoy using [Swagger](https://swagger.io/) UI for easy demo!
+
 <img alt="teaser" src="./static/images/yolov5_flask_swagger.png">
 
 
