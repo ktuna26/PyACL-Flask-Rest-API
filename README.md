@@ -80,7 +80,7 @@ Open the terminal on the project path and then run the following command.
 python3 utils/stress_test.py
 ```
 
-**Note :** You can edit all app settings such as stress test, swagger etc. via data/app.cfg
+**Note :** You can edit all app settings such as stress test, swagger etc. via `data/app.cfg`.
 
 
 ## Docker Build & Run
