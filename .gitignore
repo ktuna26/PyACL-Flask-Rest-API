@@ -138,9 +138,9 @@ dmypy.json
 cython_debug/
 
 # dl/ml models
-!weights/
 .kernel_meta/
 *.json
 *.om
 *.onnx
 *.pt
+!weights/
