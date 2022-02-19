@@ -73,6 +73,15 @@ Open web browser, upload an image and enjoy using [Swagger](https://swagger.io/)
 
 <img alt="teaser" src="./static/images/yolov5_flask_swagger.png">
 
+### Stress Test
+Open the terminal on the project path and then run the following command.
+
+```bash
+python3 utils/stress_test.py
+```
+
+**Note :** You can edit all app settings such as stress test, swagger etc. via data/app.cfg
+
 
 ## Docker Build & Run
 First of all, download [Ascend-cann-nnrt_5.0.2_linux-x86_64.run](https://support.huawei.com/enterprise/zh/software/252806303-ESW2000387054) inference engine software package from [hiascend](www.hiascend.com/en/) website to project path and then build the docker image by running the following code on bash.

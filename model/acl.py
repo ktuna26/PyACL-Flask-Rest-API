@@ -217,28 +217,22 @@ class NET(object):
 
     def __get_callback(self):
         acl.rt.launch_callback(self.__callback_func,
-                            self.excute_dataset,
+                            self.dataset_list,
                             1,
                             self.stream)
-        self.dataset_list.extend(self.excute_dataset)
-        self.excute_dataset = []
         
         
     def __forward(self):
         print('[MODEL] execute stage:')
-        self.excute_dataset = []
-        
-        img_data, infer_output = self.dataset_list.pop(0)
-        
-        ret = acl.mdl.execute_async(self.model_id,
-                                    img_data,
-                                    infer_output,
-                                    self.stream)
-        check_ret("acl.mdl.execute_async", ret)
+        for img_data, infer_output in self.dataset_list:
+            ret = acl.mdl.execute_async(self.model_id,
+                                        img_data,
+                                        infer_output,
+                                        self.stream)
+            check_ret("acl.mdl.execute_async", ret)
 
-        if True:
-            self.excute_dataset.append([img_data, infer_output])
-            self.__get_callback()
+        self.__get_callback()
+        print('[MODEL] execute stage success')
         
         
     def __callback_func(self, delete_list):
@@ -289,6 +283,7 @@ class NET(object):
             j += 1
 
             self.results.append(bboxes)
+
         self.__destroy_dataset_and_databuf()
         print('[MODEL] callback func stage success')
 
